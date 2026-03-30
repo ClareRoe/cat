@@ -6,8 +6,10 @@ import Gallery from './pages/Gallery'
 import Favourites from './pages/Favourites'
 
 function App() {
+  const basename = import.meta.env.PROD ? '/cat' : '/'
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <div className="min-h-screen bg-purple-50 flex flex-col">
         <Navbar />
         <main className="flex-1">
